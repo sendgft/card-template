@@ -1,3 +1,4 @@
+const sharedJS = require('@sendgft/shared.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
@@ -23,7 +24,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: 'src/index.html',
+      urlToSharedJs: sharedJS.url,
     })
   ]  
 }

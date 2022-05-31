@@ -23,6 +23,6 @@ interface Gift {
    * The `gift` paramater is an object with the `Gift` structure shown above.
    */
   window.setGift = (gift /* typeof gift === Gift */) => {
-    document.body.innerHTML = `<pre>${JSON.stringify(gift, null, 2)}</pre>`
+    document.getElementById('content').innerHTML = `<pre>${JSON.stringify(gift, null, 2)}</pre>`
   }
 })()
